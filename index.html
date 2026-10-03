@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free trading calculators for position sizing, risk-reward and profit & loss.">
+  <title>TradeTools Hub — Free Trading Calculators</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#">TradeTools<span>Hub</span></a>
+      <nav>
+        <a href="#tools">Tools</a>
+        <a href="#learn">Learn</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">FREE TRADING TOOLS</p>
+          <h1>Trade smarter.<br><span>Manage your risk.</span></h1>
+          <p class="hero-text">Simple calculators and practical resources to help traders plan every trade with clearer risk management.</p>
+          <a class="button" href="#tools">Explore tools ↓</a>
+        </div>
+        <div class="hero-card">
+          <div class="mini-label">RISK MANAGEMENT</div>
+          <div class="risk-row"><span>Account</span><strong>₹50,000</strong></div>
+          <div class="risk-row"><span>Risk / trade</span><strong>1%</strong></div>
+          <div class="risk-row"><span>Max risk</span><strong>₹500</strong></div>
+          <div class="risk-bar"><span></span></div>
+          <small>Plan the risk before entering.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="container">
+        <p class="eyebrow">TOOLS</p>
+        <h2>Free calculators</h2>
+        <p class="section-intro">Use these tools to calculate the numbers before you place a trade.</p>
+
+        <div class="tool-grid">
+          <article class="card">
+            <h3>Position Size</h3>
+            <p>Find how many units you can trade based on your account risk.</p>
+            <label>Account balance
+              <input id="balance" type="number" value="50000" min="0">
+            </label>
+            <label>Risk %
+              <input id="risk" type="number" value="1" min="0" step="0.1">
+            </label>
+            <label>Entry price
+              <input id="entry" type="number" value="100" min="0" step="0.01">
+            </label>
+            <label>Stop-loss price
+              <input id="stop" type="number" value="95" min="0" step="0.01">
+            </label>
+            <button onclick="positionSize()">Calculate</button>
+            <div class="result" id="positionResult">Position size: —</div>
+          </article>
+
+          <article class="card">
+            <h3>Risk / Reward</h3>
+            <p>Measure the potential reward compared with the amount at risk.</p>
+            <label>Entry price
+              <input id="rrEntry" type="number" value="100" min="0" step="0.01">
+            </label>
+            <label>Stop-loss price
+              <input id="rrStop" type="number" value="95" min="0" step="0.01">
+            </label>
+            <label>Target price
+              <input id="target" type="number" value="115" min="0" step="0.01">
+            </label>
+            <button onclick="riskReward()">Calculate</button>
+            <div class="result" id="rrResult">Risk/Reward: —</div>
+          </article>
+
+          <article class="card">
+            <h3>Profit & Loss</h3>
+            <p>Estimate trade profit or loss from entry, exit and quantity.</p>
+            <label>Entry price
+              <input id="plEntry" type="number" value="100" min="0" step="0.01">
+            </label>
+            <label>Exit price
+              <input id="plExit" type="number" value="115" min="0" step="0.01">
+            </label>
+            <label>Quantity
+              <input id="quantity" type="number" value="100" min="0" step="0.01">
+            </label>
+            <button onclick="profitLoss()">Calculate</button>
+            <div class="result" id="plResult">P&L: —</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="section learn">
+      <div class="container">
+        <p class="eyebrow">LEARN</p>
+        <h2>Build better trading habits</h2>
+        <div class="learn-grid">
+          <div><h3>Risk Management</h3><p>Learn why position sizing, stop-loss planning and consistent risk matter.</p></div>
+          <div><h3>Trading Psychology</h3><p>Understand emotions, discipline, overtrading and the effect of losses on decision-making.</p></div>
+          <div><h3>Market Structure</h3><p>Explore concepts such as trends, support and resistance, liquidity and pullbacks.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <p class="eyebrow">ABOUT</p>
+        <h2>Simple tools for independent traders.</h2>
+        <p>TradeTools Hub is designed to make basic trading calculations quick and understandable. The calculators are educational tools, not financial advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 TradeTools Hub</span>
+      <span>Educational use only.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
